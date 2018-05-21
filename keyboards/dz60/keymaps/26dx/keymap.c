@@ -73,7 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GRV , KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 , KC_F12 , _______, XXXXXXX,
         _______,          RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RESET  ,
         _______,          RGB_STA, RGB_BRE, RGB_RAI, RGB_SWI, RGB_SNA, RGB_KNI, RGB_GRA, XXXXXXX, KC_MPRV, KC_MPLY, KC_MNXT,          _______,
-        _______, _______, BL_DEC , BL_TOGG, BL_INC , BL_STEP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, KC_MUTE,          _______,
+        _______, _______, BL_TOGG, BL_DEC , BL_INC , BL_STEP, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_VOLU, KC_MUTE,          _______,
         _______,          _______, _______, _______,          _______,          _______, _______, _______, _______, _______,          _______),
 
    /* Keymap: Fourth layer (right system key block used as navigation keys)
@@ -96,3 +96,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_UP  ,          _______,
         _______,          _______, _______, _______,          _______,          _______, _______, KC_LEFT, XXXXXXX, KC_DOWN,          KC_RGHT),
 };
+
+void led_set_user(uint8_t usb_led) {
+  if (usb_led & (1<<USB_LED_CAPS_LOCK)) {
+    PORTB &= ~(1 << 2);
+  } else {
+    PORTB |= (1 << 2);
+  }
+}
