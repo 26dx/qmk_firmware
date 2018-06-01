@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB ,          KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   , KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_LBRC, KC_RBRC, KC_BSLS,
         LT(MO(2), KC_CAPS),KC_A   , KC_S   , KC_D   , KC_F   , KC_G   , KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,          KC_ENT ,
         KC_LSFT, XXXXXXX, KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   , KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_RSFT,          XXXXXXX,
-        KC_LCTL,          KC_LGUI, KC_LALT, KC_SPC ,          KC_SPC ,          KC_SPC , MO(1)  , KC_RALT, XXXXXXX, KC_APP,          KC_RCTL),
+        KC_LCTL,          KC_LGUI, KC_LALT, KC_SPC ,          KC_SPC ,          KC_SPC , MO(1)  , KC_RALT, XXXXXXX, KC_RGUI,          KC_RCTL),
 
     /* Keymap : Second Layer (WASD and Media)
    * ,-----------------------------------------------------------.
@@ -54,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,          XXXXXXX,  KC_UP,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_PSCR, KC_SLCK, KC_PAUSE,XXXXXXX,
         _______,          KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_INS , KC_HOME, KC_PGUP,          _______,
         _______, _______, TASKM  , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL , KC_END , KC_PGDN, XXXXXXX,          _______,
-        _______,          _______, _______, _______,          TG(3)  ,          _______, _______, _______, _______, _______,          _______),
+        _______,          _______, _______, _______,          TG(3)  ,          _______, _______, _______, _______,  KC_APP,          _______),
 
    /* Keymap : Third Layer (RGB / Reset)
    * ,-----------------------------------------------------------.
